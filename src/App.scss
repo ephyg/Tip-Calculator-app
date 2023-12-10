@@ -1,0 +1,189 @@
+@import "./const-styles.scss";
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: $my-font;
+  border: none;
+  box-sizing: border-box;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.app-container {
+  background-color: $background-color;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 0px 200px;
+  width: 100%;
+  @media (max-width: 375px) {
+    min-height: 100vh;
+    padding: 100px 0px;
+  }
+  @media (max-width: 768px) {
+    min-height: 100vh;
+    padding: 0px 50px;
+  }
+  .header-text {
+    font-size: 10px;
+    color: $secondary-color;
+    letter-spacing: 8px;
+  }
+  .card-container {
+    display: grid;
+    grid-template-columns: 375px 375px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 40px;
+    gap: 60px;
+    @media (max-width: 375px) {
+      grid-template-columns: 1fr;
+      padding: 20px;
+    }
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+    .left-container {
+  
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      .input-container {
+        display: flex;
+        gap: 8px;
+        flex-direction: column;
+        label {
+          color: $Dark-grayish-cyan;
+          font-size: 18px;
+          font-weight: 700;
+        }
+      }
+      .tip-selection-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        h3 {
+          color: $Dark-grayish-cyan;
+          font-size: 18px;
+          font-weight: 700;
+        }
+        .tip-percent-container {
+          display: grid;
+          gap: 20px;
+          grid-template-columns: 1fr 1fr 1fr;
+          @media (max-width: 375px) {
+            grid-template-columns: 1fr 1fr;
+          }
+          @media (max-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+          }
+          input {
+            font-size: 24px;
+            min-width: 100px;
+            padding: 10px 10px;
+            border-radius: 5px;
+            font-weight: 700;
+            text-align: center;
+            cursor: pointer;
+          }
+          input {
+            font-size: 20px;
+            background-color: $Dark-grayish-cyan-blur;
+            &:hover,
+            &:focus {
+              outline: auto;
+              outline-color: $primary-color;
+              outline-width: 3px;
+            }
+          }
+        }
+      }
+      .people-num-container {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        .label-container {
+          display: flex;
+          justify-content: space-between;
+          label {
+            color: $Dark-grayish-cyan;
+            font-size: 18px;
+            font-weight: 700;
+            @media (max-width: 375px) {
+              font-size: 14px;
+            }
+            @media (max-width: 768px) {
+              font-size: 16px;
+            }
+          }
+          .error-message {
+            color: rgb(201, 74, 74);
+          }
+        }
+      }
+    }
+    .right-container {
+      background-color: $secondary-color;
+      width: 100%;
+      border-radius: 20px;
+      padding: 40px 40px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 35px;
+      .amount-and-total {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 35px;
+        .tip-amount-container,
+        .total-container {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          .label-container {
+            display: flex;
+            gap: 5px;
+            flex-direction: column;
+            h2 {
+              color: white;
+              font-size: 14px;
+              font-weight: 700;
+            }
+            p {
+              color: $Grayish-cyan;
+              font-weight: 700;
+              font-size: 12px;
+            }
+          }
+          span {
+            font-size: 40px;
+            color: $primary-color;
+            font-weight: 700;
+          }
+        }
+      }
+      button {
+        width: 100%;
+        font-size: 18px;
+        background-color: $Dark-grayish-cyan;
+        color: $secondary-color;
+        &:hover {
+          background-color: $background-color;
+        }
+      }
+    }
+  }
+}

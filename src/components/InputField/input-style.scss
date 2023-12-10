@@ -1,0 +1,30 @@
+@import "../../const-styles.scss";
+.inputs-container {
+  border-radius: 5px;
+  position: relative;
+  background-color: $Dark-grayish-cyan-blur;
+  input {
+    text-align: end;
+    width: 100%;
+    font-size: 24px;
+    padding: 8px 20px;
+    border-radius: 5px;
+    color: $secondary-color;
+    font-weight: 700;
+    background-color: $Dark-grayish-cyan-blur;
+    &:focus,
+    &:hover {
+      outline: auto;
+      outline-color: $primary-color;
+    }
+    &::placeholder {
+      color: $Dark-grayish-cyan;
+    }
+  }
+  img {
+    position: absolute;
+    transform: translateY(-50%);
+    left: 10px;
+    top: 50%;
+  }
+}

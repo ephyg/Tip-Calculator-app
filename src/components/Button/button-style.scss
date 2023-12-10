@@ -1,0 +1,19 @@
+@import "../../const-styles.scss";
+button {
+  font-size: 24px;
+  min-width: 100px;
+  padding: 10px 10px;
+  border-radius: 5px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+}
+button {
+  background-color: $secondary-color;
+  color: white;
+  &:hover,
+  &:focus {
+    background-color: $background-color;
+    color: $secondary-color;
+  }
+}
